@@ -1,0 +1,29 @@
+
+#pageHdr{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr;
+    gap: 0;
+}
+
+#pageTitle{
+    grid-area: 2 / 1 / span 1 / span 1;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    color: aliceblue;
+}
+
+#pageDesc{
+    grid-area: 3 / 1 / span 1 / span 1;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: aliceblue;
+}
