@@ -1,5 +1,5 @@
 import React from "react";
-import PageHeader from './PageHeader/PageHdr'
+import PageHeader from './Body/PageHdr'
 import NavBar from './NavBar/NavBar'
 
 function LandingPage({isWorkspace, workspaceMode}){

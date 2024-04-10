@@ -1,10 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
+import SideBar from './NavBar/SideBar'
+import Content from './Body/Content'
+import './WorkspacePage.css'
 
 function WorkspacePage({workspaceType, isWorkspace, workspaceMode}){
+
+    const [topic, setTopic] = useState("");
+
     return(
         <>
             <div id="wspaceParent">
-                <h1>{workspaceType}</h1>
+                <SideBar setTopic={setTopic}/>
+                <Content topic={topic}/>
             </div>
         </>
     )

@@ -1,0 +1,43 @@
+#sideParent{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 210px;
+    min-height: 600px;
+    background-color: rgba(1, 1, 6, 0.5);
+    backdrop-filter: blur(5px);
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+#sideBgndOvrlay{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 190px;
+    min-height: 580px;
+    background-color: rgba(205, 205, 239, 0.1);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.collapseParent{
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.openParent{
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+ul{
+    margin: 5px;
+}
