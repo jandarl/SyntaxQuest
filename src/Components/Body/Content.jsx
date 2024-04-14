@@ -9,6 +9,7 @@ function Content({topic}){
     const [itemTitle, setItemTitle] = useState("");
     const [itemDescription, setItemDescription] = useState("");
     const [itemBody, setItemBody] = useState("");
+    const vercel_path = "https://${process.env.VERCEL_URL}";
 
     function setData(props){
         setItemID(props.id);
@@ -18,7 +19,7 @@ function Content({topic}){
     }
 
     function FetchData(filename){
-        const filepath = "/src/Data/" + filename;
+        const filepath = vercel_path + "/src/Data/" + filename;
 
         fetch(`${filepath}.json`).then(response => response.json()).then(
             data => setData(data)
