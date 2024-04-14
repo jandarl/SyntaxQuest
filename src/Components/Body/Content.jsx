@@ -20,11 +20,13 @@ function Content({topic}){
 
     function FetchData(filename){
        // const filepath = vercel_path + "/src/Data/" + filename;
-       const filepath = fs.readFile(process.cwd() + + "/src/Data/" + filename, 'utf8');
+       const file = fs.readFile(process.cwd() + + "/src/Data/" + filename, 'utf8');
+       const data = JSON.parse(file);
+       setData(data);
 
-        fetch(`${filepath}.json`).then(response => response.json()).then(
+       /* fetch(`${filepath}.json`).then(response => response.json()).then(
             data => setData(data)
-        )
+        )*/
     }
 
     return(
