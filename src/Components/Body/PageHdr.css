@@ -26,25 +26,4 @@
     color: aliceblue;
 }
 
-.bungee-shade-regular {
-    font-family: "Bungee Shade", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.honk-title {
-  font-family: "Honk", system-ui;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "MORF" 200,
-    "SHLN" 200;
-}
-
-.fugaz-one-regular {
-    font-family: "Fugaz One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
   

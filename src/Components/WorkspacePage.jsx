@@ -5,12 +5,12 @@ import './WorkspacePage.css'
 
 function WorkspacePage({workspaceType, isWorkspace, workspaceMode}){
 
-    const [topic, setTopic] = useState("");
+    const [topic, setTopic] = useState(workspaceType);
 
     return(
         <>
             <div id="wspaceParent">
-                <SideBar setTopic={setTopic}/>
+                <SideBar workspaceType={workspaceType} setTopic={setTopic}/>
                 <Content topic={topic}/>
             </div>
         </>

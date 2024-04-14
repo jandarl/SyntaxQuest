@@ -1,10 +1,10 @@
 import React from "react";
 import './ContentBody.css';
 
-function ContentBody({topic}){
+function ContentBody({content}){
     return(
         <div>
-
+            {content}
         </div>
     )
 }

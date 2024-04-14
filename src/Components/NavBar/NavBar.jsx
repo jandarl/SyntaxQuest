@@ -1,16 +1,13 @@
 import React from "react";
 import VidGameImg from '/videogame.png'
 import './NavBar.css'
+import '/src/fonts.css'
 
 function NavBar({isWorkspace, workspaceMode}){
 
     const handleClick = (id) => {
-        switch(id){
-            case "vgameImage":
-                isWorkspace(true);
-                workspaceMode("vgameImage");
-                break;   
-        }
+        isWorkspace(true);
+        workspaceMode(id);
     }
 
     const handleHover = (id, hover) =>{
@@ -22,12 +19,12 @@ function NavBar({isWorkspace, workspaceMode}){
     }
 
     return(
-        <div id="navParent">
+        <div id="navParent" className="prevent-select">
         <div id="navBgndOvrlay"></div>
         <div className="centerImg" id="vgameDiv">
-            <img src={VidGameImg}  className="clickImg" id="vgameImage" onClick={() => handleClick("vgameImage")}/>
+            <img src={VidGameImg}  className="clickImg" id="vgameImage" onClick={() => handleClick("Video Games")}/>
             <h6 className="navName" id="navVGames" 
-            onClick={() => handleClick("vgameImage")} 
+            onClick={() => handleClick("Video Games")} 
             onMouseEnter={() => handleHover("vgameImage", true)}
             onMouseLeave={() => handleHover("vgameImage", false)}>Video Games</h6>
         </div>

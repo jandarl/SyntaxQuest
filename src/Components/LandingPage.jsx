@@ -5,7 +5,7 @@ import NavBar from './NavBar/NavBar'
 function LandingPage({isWorkspace, workspaceMode}){
     return(
         <>        
-        <PageHeader title={'Syntax Quest'} description={'SO​FTWARE DEVELOPMENT, GAMES AND LIFE'} />
+        <PageHeader title={'Syntax Quest'} description={'I am Drew Hernandez, I am a Software Engineer that loves Video Games and Coffee'} />
         <NavBar isWorkspace={isWorkspace} workspaceMode={workspaceMode}/>
         </>
     )
