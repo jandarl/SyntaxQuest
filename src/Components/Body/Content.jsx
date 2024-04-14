@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import PageHeader from "./PageHdr";
 import ContentBody from "./ContentBody";
-import {promises as fs} from "fs";
 import './Content.css';
 
 function Content({topic}){
@@ -19,14 +18,11 @@ function Content({topic}){
     }
 
     function FetchData(filename){
-       // const filepath = vercel_path + "/src/Data/" + filename;
-       const file = fs.readFile(process.cwd() + + "/src/Data/" + filename, 'utf8');
-       const data = JSON.parse(file);
-       setData(data);
+       const filepath = "/src/Data/" + filename;
 
-       /* fetch(`${filepath}.json`).then(response => response.json()).then(
+        fetch(`${filepath}.json`).then(response => response.json()).then(
             data => setData(data)
-        )*/
+        )
     }
 
     return(
