@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PageHeader from "./PageHdr";
 import ContentBody from "./ContentBody";
+import {promises as fs} from "fs";
 import './Content.css';
 
 function Content({topic}){
@@ -9,7 +10,6 @@ function Content({topic}){
     const [itemTitle, setItemTitle] = useState("");
     const [itemDescription, setItemDescription] = useState("");
     const [itemBody, setItemBody] = useState("");
-    const vercel_path = "https://${process.env.VERCEL_URL}";
 
     function setData(props){
         setItemID(props.id);
@@ -19,7 +19,8 @@ function Content({topic}){
     }
 
     function FetchData(filename){
-        const filepath = vercel_path + "/src/Data/" + filename;
+       // const filepath = vercel_path + "/src/Data/" + filename;
+       const filepath = fs.readFile(process.cwd() + + "/src/Data/" + filename, 'utf8');
 
         fetch(`${filepath}.json`).then(response => response.json()).then(
             data => setData(data)
