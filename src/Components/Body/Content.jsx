@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PageHeader from "./PageHdr";
 import ContentBody from "./ContentBody";
 import './Content.css';
+import isProd from "./CheckEnv";
 
 function Content({topic}){
 
@@ -9,6 +10,7 @@ function Content({topic}){
     const [itemTitle, setItemTitle] = useState("");
     const [itemDescription, setItemDescription] = useState("");
     const [itemBody, setItemBody] = useState("");
+    const [defaultDir, setDefaultDir] = useState("/src/Data/");
 
     function setData(props){
         setItemID(props.id);
@@ -18,7 +20,12 @@ function Content({topic}){
     }
 
     function FetchData(filename){
-       const filepath = "/src/Data/" + filename;
+
+        if(isProd() === true){
+            setDefaultDir("https://" + `${process.env.VERCEL_URL}` + "/src/Data/") ;
+        }
+
+       const filepath = defaultDir + filename;
 
         fetch(`${filepath}.json`).then(response => response.json()).then(
             data => setData(data)
