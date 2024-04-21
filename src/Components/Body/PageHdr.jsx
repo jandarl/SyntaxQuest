@@ -1,6 +1,6 @@
 import React from "react";
-import './PageHdr.css'
-import '/src/fonts.css'
+import './PageHdr.css';
+import '/src/Components/fonts.css';
 
 function PageHeader({title, description}){
     return(

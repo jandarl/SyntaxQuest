@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Collapsible from 'react-collapsible';
-import './SideBar.css'
-import '/src/fonts.css'
+import './SideBar.css';
+import '/src/Components/fonts.css';
 
 function Sidebar({workspaceType, setTopic}){
 
@@ -13,50 +13,31 @@ function Sidebar({workspaceType, setTopic}){
     useEffect(() => {
         if(isInit === false){
             setInit(true);
-            initSidebar();
+            toggleCollapsible(workspaceType);
         }
     })
 
-    function initSidebar(){
-        switch(workspaceType){
-            case "Video Games":
+    function toggleCollapsible(value){
+        setShowVGames(false);
+        setShowSoftDev(false);
+        setShowLife(false);
+
+        switch(value){
+            case "video-games":
                 setShowVGames(true);
-                setShowSoftDev(false);
-                setShowLife(false);
                 break;
-            case "Software Development":
-                setShowVGames(false);
+            case "software-dev":
                 setShowSoftDev(true);
-                setShowLife(false);
                 break;
-            case "Live Your Life":
-                setShowVGames(false);
-                setShowSoftDev(false);
+            case "who-am-i":
+            case "life-experience":
                 setShowLife(true);
                 break;
            }
     }
 
     function handleOpening(){
-       var text = this.trigger;
-
-       switch(text){
-        case "Video Games":
-            setShowVGames(true);
-            setShowSoftDev(false);
-            setShowLife(false);
-            break;
-        case "Software Development":
-            setShowVGames(false);
-            setShowSoftDev(true);
-            setShowLife(false);
-            break;
-        case "Live Your Life":
-            setShowVGames(false);
-            setShowSoftDev(false);
-            setShowLife(true);
-            break;
-       }
+       toggleCollapsible(this.value);
     }
 
     function handleClick(event){
@@ -65,7 +46,8 @@ function Sidebar({workspaceType, setTopic}){
 
     return (
         <div id="sideParent" className="prevent-select">
-        <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} open={showVGames} trigger="Video Games">
+        <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} 
+                    open={showVGames} trigger="Video Games" value="video-games">
             <ul className="sideList" id="vgameList">
                 <li className="listItem" onClick={handleClick} id="final-fantasy-vii-rebirth">Final Fantasy VII Rebirth</li>
                 <li className="listItem" onClick={handleClick} id="final-fantasy-xiv">Final Fantasy XIV</li>
@@ -73,18 +55,18 @@ function Sidebar({workspaceType, setTopic}){
                 <li className="listItem" onClick={handleClick} id="chrono-cross">Chrono Cross</li>
             </ul>
         </Collapsible>
-        <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} open={showSoftDev} trigger="Software Development">
+        <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} 
+                     open={showSoftDev} trigger="Software Development" value="software-dev">
             <ul className="sideList" id="softdev">
                 <li className="listItem" onClick={handleClick} id="c++">C++</li>
                 <li className="listItem" onClick={handleClick} id="react">React</li>
                 <li className="listItem" onClick={handleClick} id="python">Python</li>
             </ul>
         </Collapsible>
-        <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} open={showLife} trigger="Live Your Life">
-            <ul className="sideList" id="softdev">
-                <li className="listItem" onClick={handleClick} id="quotes">Quotes</li>
-                <li className="listItem" onClick={handleClick} id="thoughts">Thoughts</li>
-                <li className="listItem" onClick={handleClick} id="experience">Experience</li>
+        <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} 
+                     open={showLife} trigger="Life Experience" value="life-experience">
+            <ul className="sideList" id="lifeexp">
+                <li className="listItem" onClick={handleClick} id="who-am-i">Who Am I?</li>
             </ul>
         </Collapsible>
         </div>

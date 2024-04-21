@@ -1,7 +1,7 @@
 import React from "react";
-import './ContentBody.css';
+import './ContentBodyTemp.css';
 
-function ContentBody({content}){
+function ContentBodyTemp({content}){
     return(
         <div>
             {content}
@@ -9,4 +9,4 @@ function ContentBody({content}){
     )
 }
 
-export default ContentBody;
+export default ContentBodyTemp;

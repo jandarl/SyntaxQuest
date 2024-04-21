@@ -1,5 +1,5 @@
 
-.contentParent{
+#contentParent{
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -10,7 +10,7 @@
     top: 10px;
 }
 
-.HdrParent{
+#HdrParent{
     display: block;
     width: 80vw;
     min-width:  fit-content;
@@ -24,7 +24,7 @@
     text-align: center;
 }
 
-.bodyParent{
+#bodyParent{
     display: block;
     top: 10px;
     width: 80vw;

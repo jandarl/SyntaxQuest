@@ -1,7 +1,8 @@
 import React from "react";
-import VidGameImg from '/videogame.png'
-import './NavBar.css'
-import '/src/fonts.css'
+import VidGameImg from '/videogame.png';
+import WhoAmIImg from '/whoami.png';
+import './NavBar.css';
+import '/src/Components/fonts.css';
 
 function NavBar({isWorkspace, workspaceMode}){
 
@@ -22,11 +23,18 @@ function NavBar({isWorkspace, workspaceMode}){
         <div id="navParent" className="prevent-select">
         <div id="navBgndOvrlay"></div>
         <div className="centerImg" id="vgameDiv">
-            <img src={VidGameImg}  className="clickImg" id="vgameImage" onClick={() => handleClick("Video Games")}/>
+            <img src={VidGameImg}  className="clickImg" id="vgameImage" onClick={() => handleClick("video-games")}/>
             <h6 className="navName" id="navVGames" 
-            onClick={() => handleClick("Video Games")} 
+            onClick={() => handleClick("video-games")} 
             onMouseEnter={() => handleHover("vgameImage", true)}
             onMouseLeave={() => handleHover("vgameImage", false)}>Video Games</h6>
+        </div>
+        <div className="centerImg" id="whoamiDiv">
+            <img src={WhoAmIImg} className="clickImg" id="whoamiImage" onClick={() => handleClick("who-am-i")}/>
+            <h6 className="navName" id="navWhoami"
+            onClick={() => handleClick("who-am-i")}
+            onMouseEnter={() => handleHover("whoamiImage", true)}
+            onMouseLeave={() => handleHover("whoamiImage", false)}>Who Am I?</h6>
         </div>
     </div>
     )

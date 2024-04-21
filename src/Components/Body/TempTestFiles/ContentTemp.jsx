@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import PageHeader from "./PageHdr";
-import ContentBody from "./ContentBody";
-import './Content.css';
+import PageHeader from "/src/Components/Body/PageHdr";
+import ContentBodyTemp from "./ContentBodyTemp";
+import './ContentTemp.css';
 import isProd from "./CheckEnv";
 
-function Content({topic}){
+function ContentTemp({topic}){
 
     const [itemID, setItemID] = useState("");
     const [itemTitle, setItemTitle] = useState("");
@@ -40,11 +40,11 @@ function Content({topic}){
                 <PageHeader title={itemTitle} description={itemDescription}/>
             </div>
             <div id="bodyParent">
-                <ContentBody content={itemBody}/>
+                <ContentBodyTemp content={itemBody}/>
             </div>
         </div>
         </>
     )
 }
 
-export default Content;
+export default ContentTemp;

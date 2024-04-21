@@ -29,6 +29,21 @@
     cursor: pointer;
 }
 
+.highlight{
+    box-shadow: 0 0 5px 5px rgba(155, 198, 236, 0.588);
+    border-radius: 50%;
+    opacity: 1.0;
+}
+
+.navName{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    color: aliceblue;
+    margin: 0;
+    padding: 0;
+}
+
 
 #vgameDiv{
     grid-area: 2 / 1 / span 1 / span 1;
@@ -55,24 +70,39 @@
     opacity: 1.0;
 }
 
-.highlight{
-    box-shadow: 0 0 5px 5px rgba(155, 198, 236, 0.588);
-    border-radius: 50%;
-    opacity: 1.0;
-}
-
-.navName{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.2rem;
-    text-align: center;
-    color: aliceblue;
-    margin: 0;
-    padding: 0;
-}
-
 #navVGames{
     grid-area: 3 / 2 / span 1 / span 1;
     z-index: 4;
     cursor: pointer;
 }
 
+#whoamiDiv{
+    grid-area: 4 / 1 / span 1 / span 1;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+}
+
+#whoamiImage{
+    grid-area: 1 / 2 / span 1 / span 1;
+    max-width: 5rem;
+    max-height: 5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    cursor: pointer;
+}
+
+#whoamiImage:hover{
+    box-shadow: 0 0 5px 5px rgba(155, 198, 236, 0.588);
+    border-radius: 50%;
+    opacity: 1.0;
+}
+
+#navWhoami{
+    grid-area: 3 / 2 / span 1 / span 1;
+    z-index: 4;
+    cursor: pointer;
+}
