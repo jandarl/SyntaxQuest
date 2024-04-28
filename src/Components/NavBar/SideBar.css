@@ -19,6 +19,7 @@
     padding: 5px;
     cursor: pointer;
     z-index: 2;
+    color:aliceblue;
 }
 
 .openParent{
@@ -26,8 +27,10 @@
     padding: 5px;
     cursor: pointer;
     z-index: 2;
+    color:aliceblue;
 }
 
 ul{
     margin: 5px;
+    color:aliceblue;
 }

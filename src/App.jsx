@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import LandingPage from './Components/LandingPage';
 import WorkspacePage from './Components/WorkspacePage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {

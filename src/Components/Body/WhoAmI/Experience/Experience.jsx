@@ -1,0 +1,21 @@
+import React from "react";
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import JobExperience from "./JobExperience";
+import '/src/Components/fonts.css';
+import './Experience.css';
+
+function Experience(){
+    return(
+        <>
+          <Tabs defaultActiveKey="Job" id="justify-tab-example" className="mb-3 fugaz-one-regular" justify>
+            <Tab eventKey="Job" title="Job Experience">
+              <JobExperience />
+            </Tab>
+            <Tab eventKey="Projects" title="Projects">Projects</Tab>
+          </Tabs>
+        </>
+    )
+}
+
+export default Experience;

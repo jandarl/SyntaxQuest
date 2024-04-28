@@ -24,14 +24,14 @@ function NavBar({isWorkspace, workspaceMode}){
         <div id="navBgndOvrlay"></div>
         <div className="centerImg" id="vgameDiv">
             <img src={VidGameImg}  className="clickImg" id="vgameImage" onClick={() => handleClick("video-games")}/>
-            <h6 className="navName" id="navVGames" 
+            <h6 className="navName fugaz-one-regular" id="navVGames" 
             onClick={() => handleClick("video-games")} 
             onMouseEnter={() => handleHover("vgameImage", true)}
             onMouseLeave={() => handleHover("vgameImage", false)}>Video Games</h6>
         </div>
         <div className="centerImg" id="whoamiDiv">
             <img src={WhoAmIImg} className="clickImg" id="whoamiImage" onClick={() => handleClick("who-am-i")}/>
-            <h6 className="navName" id="navWhoami"
+            <h6 className="navName fugaz-one-regular" id="navWhoami"
             onClick={() => handleClick("who-am-i")}
             onMouseEnter={() => handleHover("whoamiImage", true)}
             onMouseLeave={() => handleHover("whoamiImage", false)}>Who Am I?</h6>

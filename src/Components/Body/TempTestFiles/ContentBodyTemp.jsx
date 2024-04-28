@@ -3,7 +3,7 @@ import './ContentBodyTemp.css';
 
 function ContentBodyTemp({content}){
     return(
-        <div>
+        <div id="contentTempBody">
             {content}
         </div>
     )

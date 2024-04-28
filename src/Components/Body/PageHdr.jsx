@@ -6,7 +6,7 @@ function PageHeader({title, description}){
     return(
         <div id="pageHdr" className="prevent-select">
             <h1 className="bungee-shade-regular" id="pageTitle">{title}</h1>
-            <h6 className="wellfleet-regular" id="pageDesc">{description}</h6>
+            <h6 className="vt323-regular" id="pageDesc">{description}</h6>
         </div>
     )
 }

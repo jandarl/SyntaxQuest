@@ -1,0 +1,11 @@
+
+.nav.nav-tabs .nav-link:not(active){
+    color: aliceblue;
+    font-size: 15px;
+}
+
+.nav.nav-tabs .nav-link.active {
+    background-color: rgb(14, 52, 86);
+    color: aliceblue;
+    font-size: 15px;
+}
