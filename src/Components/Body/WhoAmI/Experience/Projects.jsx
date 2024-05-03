@@ -5,43 +5,43 @@ import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
 import JSONStaffEnggr from '/src/Data/staff-engineer.json';
 import ExpContent from "./ExpContent";
-import './JobExperience.css';
+import './Projects.css';
 
-function JobExperience(){
+function Projects(){
     return(
         <>
-        <Tab.Container id="job-exp-pills" defaultActiveKey="SrSWEngNS">
+        <Tab.Container id="job-exp-pills" defaultActiveKey="Project1">
             <Row>
                 <Col sm={3}>
                     <Nav variant="pills" className="flex-column courier-prime-regular">
                         <Nav.Item>
-                            <Nav.Link eventKey="SrSWEngNS">Sr. Software Engineer - 2015-Present Northstar Technologies</Nav.Link>
+                            <Nav.Link eventKey="Project1">Project Number 1</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="JrSWEngNS">Jr. Software Engineer - 2012-2015 Northstar Technologies</Nav.Link>
+                            <Nav.Link eventKey="Project2">Project Number 2</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="StfEngNS">Staff Engineer - 2010-2012 Northstar Technologies</Nav.Link>
+                            <Nav.Link eventKey="Project3">Project Number 3</Nav.Link>
                         </Nav.Item>
                     </Nav>
                 </Col>
                 <Col sm={9}>
                     <Tab.Content>
-                        <Tab.Pane eventKey="SrSWEngNS">
+                        <Tab.Pane eventKey="Project1">
                             <ExpContent 
                             title={JSONStaffEnggr.Title} 
                             subtitle={JSONStaffEnggr.SubTitle} 
                             description={JSONStaffEnggr.Description} 
                             information={JSONStaffEnggr.Information}/>
                         </Tab.Pane>
-                        <Tab.Pane eventKey="JrSWEngNS">
+                        <Tab.Pane eventKey="Project2">
                             <ExpContent 
                             title={JSONStaffEnggr.Title} 
                             subtitle={JSONStaffEnggr.SubTitle} 
                             description={JSONStaffEnggr.Description} 
                             information={JSONStaffEnggr.Information}/>
                         </Tab.Pane>
-                        <Tab.Pane eventKey="StfEngNS">
+                        <Tab.Pane eventKey="Project3">
                             <ExpContent 
                             title={JSONStaffEnggr.Title} 
                             subtitle={JSONStaffEnggr.SubTitle} 
@@ -56,4 +56,4 @@ function JobExperience(){
     )
 }
 
-export default JobExperience;
+export default Projects;

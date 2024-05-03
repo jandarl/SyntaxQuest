@@ -1,0 +1,18 @@
+
+#ecTitle{
+    padding: 1rem;
+    text-align: left;
+}
+
+#ecSubTitle{
+    padding: 1rem;
+    text-align: left;
+}
+
+.ecScrollDiv{
+    max-height: 200px;
+    padding: 1rem;
+    overflow-y: auto;
+    text-align: left;
+    white-space: pre-wrap;
+}
