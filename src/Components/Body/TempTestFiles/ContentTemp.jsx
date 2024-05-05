@@ -4,7 +4,7 @@ import ContentBodyTemp from "./ContentBodyTemp";
 import './ContentTemp.css';
 import isProd from "./CheckEnv";
 
-function ContentTemp({topic}){
+function ContentTemp({topic, vwSize}){
 
     const [itemID, setItemID] = useState("");
     const [itemTitle, setItemTitle] = useState("");
@@ -35,11 +35,11 @@ function ContentTemp({topic}){
     return(
         <>
         {FetchData(topic)}
-        <div id="contentParent">
+        <div id={vwSize > 650 ? "contentParent" : "smallContentParent"}>
             <div id="HdrParent">
                 <PageHeader title={itemTitle} description={itemDescription}/>
             </div>
-            <div id="bodyParent">
+            <div id={vwSize > 650 ? "bodyParent" : "smallBodyParent"}>
                 <ContentBodyTemp content={itemBody}/>
             </div>
         </div>

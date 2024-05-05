@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Accordion from "react-bootstrap/Accordion";
 import JSONData from '/src/Data/who-am-i.json';
 import PageHeader from '/src/Components/Body/PageHdr';
@@ -7,15 +7,14 @@ import '/src/Components/Body/Content.css';
 import '/src/Components/fonts.css';
 import './WhoAmI.css';
 
-function WhoAmI(){
-
+function WhoAmI({vwSize}){
     return(
         <>
-        <div className="contentParent">
+        <div className={vwSize > 650 ? "contentParent" : "smallContentParent"}>
             <div className="HdrParent">
                 <PageHeader title={JSONData.title} description={JSONData.description}/>
             </div>
-            <div className="bodyParent">
+            <div className={vwSize > 650 ? "bodyParent" : "smallBodyParent"}>
             <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
                     <Accordion.Header className="fugaz-one-regular">Hobbies</Accordion.Header>

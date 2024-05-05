@@ -21,17 +21,11 @@ function LandingPage({isWorkspace, workspaceMode}){
             height
         };
     }
-
-    function UseNavBar(){
-        console.log(windowDimensions.width);
-        console.log(windowDimensions.height);
-    }
-
+    
     return(
         <>        
-        <PageHeader title={'Syntax Quest'} description={'Software / Games / Sci-Fi / Fantasy / Knowledge / Life'} />
-        <NavBar isWorkspace={isWorkspace} workspaceMode={workspaceMode}/>
-        {UseNavBar()}
+        <PageHeader title={'Syntax Quest'} description={'Software / Games / Sci-Fi / Fantasy / Knowledge / Life'} />      
+        <NavBar isWorkspace={isWorkspace} workspaceMode={workspaceMode} vwSize={windowDimensions.width}/>
         </>
     )
 }

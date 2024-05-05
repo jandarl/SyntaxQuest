@@ -105,3 +105,25 @@
     z-index: 4;
     cursor: pointer;
 }
+
+#navDropdownBtn{
+    width: calc(100vw - 70px) !important;
+    background-color: rgba(1, 1, 6, 0.5);
+    backdrop-filter: blur(5px);
+    border-color: rgba(205, 205, 239, 0.1);
+}
+
+.navDropItem{
+    width: calc(100vw - 70px) !important; 
+    font-size: 20px;
+}
+
+.navDropItem:hover{
+    background-color: rgba(1, 1, 6, 0.5) !important;
+    color: aliceblue !important;
+}
+
+.navDropImg{
+    width: 32px;
+    height: 32px;
+}
