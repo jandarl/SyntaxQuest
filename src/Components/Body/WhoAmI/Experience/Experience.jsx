@@ -9,7 +9,7 @@ import './Experience.css';
 function Experience({setTopic}){
     return(
         <>
-          <Tabs defaultActiveKey="Job" id="justify-tab-example" className="mb-3 fugaz-one-regular" justify>
+          <Tabs transition={false} defaultActiveKey="Job" id="justify-tab-example" className="mb-3 fugaz-one-regular" justify>
             <Tab eventKey="Job" title="Job Experience">
               <JobExperience />
             </Tab>

@@ -12,7 +12,7 @@ import './JobExperience.css';
 function JobExperience(){
     return(
         <>
-        <Tab.Container id="job-exp-pills" defaultActiveKey="SrSWEngNS">
+        <Tab.Container transition={false} id="job-exp-pills" defaultActiveKey="SrSWEngNS">
             <Row>
                 <Col sm={3}>
                     <Nav variant="pills" className="flex-column courier-prime-regular">
