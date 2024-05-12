@@ -13,7 +13,7 @@ function ExpContent({title, subtitle, description, information}){
             <h5>Responsibilities and Projects:</h5>
             <ul>
                 {description.map((item) => 
-                    <li>{item}</li>
+                    <li key={item}>{item}</li>
                 )} 
             </ul>
             </div>
@@ -21,7 +21,7 @@ function ExpContent({title, subtitle, description, information}){
             <h5>Skills Acquired:</h5>
             <ul>
                 {information.map((item) => 
-                    <li>{item}</li>
+                    <li key={item}>{item}</li>
                 )} 
             </ul>
             </div>
