@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import PageHeader from './Body/PageHdr';
 import NavBar from './NavBar/NavBar';
+import '/src/Components/Body/Content.css';
 
 function LandingPage({isWorkspace, workspaceMode}){
 
@@ -23,8 +24,10 @@ function LandingPage({isWorkspace, workspaceMode}){
     }
     
     return(
-        <>        
-        <PageHeader title={'Syntax Quest'} description={'Software / Games / Sci-Fi / Fantasy / Knowledge / Life'} />      
+        <>
+        <div className="noWidthHdrParent">
+            <PageHeader title={'Syntax Quest'} description={'Software / Games / Sci-Fi / Fantasy / Knowledge / Life'} />    
+        </div>       
         <NavBar isWorkspace={isWorkspace} workspaceMode={workspaceMode} vwSize={windowDimensions.width}/>
         </>
     )

@@ -1,0 +1,12 @@
+{
+	"id": "WAI_1",
+	"Title": "Staff Engineer",
+	"SubTitle": "Northstar Technologies: June 2010 - January 2012",
+	"Description": ["Resolved bugs and maintained legacy test programs written in C and C++ that were used to test semiconductor devices.",
+					"Tested and resolved issues involving load boards that were used for semiconductor testing.",
+					"Deployed to customers as a field service to resolve bugs and issues involving the test program and load boards.",
+					"Built and deployed batch and perl scripts to automate operating system related tasks.",
+					"Performed I.T. related tasks such as network management and resolved computer related problems encountered by the company's employees."],   
+	"Information": ["Basic C and C++", "Methodology on resolving bugs and issues", "Proper customer handling and escalation of issues", "Batch and Perl Scripting",
+					"Network Setup (TCP/IP, LAN, WLAN)", "Computer configuration, software installation and troubleshooting", "Visual Studio 6.0", "Text Editors"]
+}

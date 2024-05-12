@@ -1,0 +1,8 @@
+{
+    "title": "Syntax Quest",
+    "img": "/syntaxquest.png",
+    "text": "My personal website is my first project while learning Web Development as a place where I could apply and practice what I learn.",
+    "info": ["HTML / CSS", "ReactJS / React-Bootstrap"],
+    "link": "syntax-quest",
+    "btnText": "Syntax Quest Details"
+}

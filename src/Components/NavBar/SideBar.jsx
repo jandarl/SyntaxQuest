@@ -31,9 +31,11 @@ function Sidebar({workspaceType, setTopic, vwSize}){
 
         switch(value){
             case "video-games":
+            case "final-fantasy-vii-rebirth":
                 setShowVGames(true);
                 break;
             case "software-dev":
+            case "syntax-quest":
                 setShowSoftDev(true);
                 break;
             case "who-am-i":
@@ -59,17 +61,12 @@ function Sidebar({workspaceType, setTopic, vwSize}){
                                 open={showVGames} trigger="Video Games" value="video-games">
                         <ul className="sideList" id="vgameList">
                             <li className="listItem" onClick={handleClick} id="final-fantasy-vii-rebirth">Final Fantasy VII Rebirth</li>
-                            <li className="listItem" onClick={handleClick} id="final-fantasy-xiv">Final Fantasy XIV</li>
-                            <li className="listItem" onClick={handleClick} id="final-fantasy-xvi">Final Fantasy XVI</li>
-                            <li className="listItem" onClick={handleClick} id="chrono-cross">Chrono Cross</li>
                         </ul>
                     </Collapsible>
                     <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} 
                                  open={showSoftDev} trigger="Software Development" value="software-dev">
                         <ul className="sideList" id="softdev">
-                            <li className="listItem" onClick={handleClick} id="c++">C++</li>
-                            <li className="listItem" onClick={handleClick} id="react">React</li>
-                            <li className="listItem" onClick={handleClick} id="python">Python</li>
+                            <li className="listItem" onClick={handleClick} id="syntax-quest">Syntax Quest</li>
                         </ul>
                     </Collapsible>
                     <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} 
@@ -93,17 +90,12 @@ function Sidebar({workspaceType, setTopic, vwSize}){
                                      open={showVGames} trigger="Video Games" value="video-games">
                             <ul className="sideList" id="vgameList">
                                 <li className="listItem" onClick={handleClick} id="final-fantasy-vii-rebirth">Final Fantasy VII Rebirth</li>
-                                <li className="listItem" onClick={handleClick} id="final-fantasy-xiv">Final Fantasy XIV</li>
-                                <li className="listItem" onClick={handleClick} id="final-fantasy-xvi">Final Fantasy XVI</li>
-                                <li className="listItem" onClick={handleClick} id="chrono-cross">Chrono Cross</li>
                             </ul>
                         </Collapsible>
                         <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} 
                                  open={showSoftDev} trigger="Software Development" value="software-dev">
                             <ul className="sideList" id="softdev">
-                                <li className="listItem" onClick={handleClick} id="c++">C++</li>
-                                <li className="listItem" onClick={handleClick} id="react">React</li>
-                                <li className="listItem" onClick={handleClick} id="python">Python</li>
+                                <li className="listItem" onClick={handleClick} id="syntax-quest">Syntax Quest</li>
                             </ul>
                         </Collapsible>
                         <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} 

@@ -1,5 +1,5 @@
 html{
-  background: url(/nightbgnd.jpeg);
+  background: url(/digitalbgnd.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -29,6 +29,5 @@ body {
   height: 100vh;
   min-width: 320px;
   min-height: 650px;
-  background-color: rgba(1, 1, 6, 0.1);
-  backdrop-filter: blur(5px);
+  background-color: rgba(1, 1, 6, 0.0);
 }

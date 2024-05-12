@@ -1,0 +1,19 @@
+{
+	"id": "WAI_3",
+	"Title": "Sr. Software Engineer",
+	"SubTitle": "Northstar Technologies: February 2016 - Present",
+	"Description": ["Built and deployed User Interfaces written in the C++ - MFC/STL to be used as an interface for the users to interact with a semiconductor equipment",
+					"Created and deployed windows background processes and services that perform various tasks that utilize the capabilities of the windows Environment, Registry, Local Policies, Network Connections together with other windows properties and services",
+					"Created and deployed libraries used for communications such as TCP/IP, Sockets, Ports, NamedPipes and etc...",
+					"Administered the generation of the company's software releases to make sure the software will be released in time, complete and properly broadcasted to the stake holders.",
+                    "Guided the Jr. Software Enggrs in resolving bugs and issues of newly deployed libraries such as memory leaks, crashes or program logic problems",
+					"Guided the Jr. Software Enggrs to help them grow not only technically but also as a person.",
+					"Built and installed Windows 7 and Windows IOT embedded together with drivers, scripts and software needed to make single board computers as embedded remote controller for new test equipments",
+                    "Built and deployed a Windows computer as a server hub to accomodate the connection of embedded remote controllers to receive the data from a test equipment",
+					"Built a Visual Studio 2017 extension using C# - VSIX technology.",
+					"Implemented SQlite and JSON as information storage where the User Interfaces may store user preferences or background processes and services may store informations logs.",
+					"Administered the migration of the local file server and local SVN server for the engineering team to the cloud storage.",
+                    "Acted as an outside advisor for the I.T. group if they are in need of an opinion or suggestion for I.T. projects in the company."],   
+	"Information": ["Better understanding of Software Development Life Cycle and Administration.", "Better understanding of the usage of C++/MFC/STL.", "Peer to Peer networking, Sockets and Port programming, DHCP Server.", "Utilization of Windows properties such as Registry, Local Policies, Firewalls, etc..",
+					"Windows background processes and services.", "Guiding and teaching Jr. Enggrs to help them grow.", "Windows 7 and Windows IOT Embedded systems and controllers", "Windows Setup Information (INF File) and Function driver", "Basic C# and VSIX", "Cloud storage", "Visual Studio 2017", "SQlite", "JSON"]
+}

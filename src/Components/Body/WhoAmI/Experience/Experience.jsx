@@ -6,7 +6,7 @@ import Projects from "./Projects";
 import '/src/Components/fonts.css';
 import './Experience.css';
 
-function Experience(){
+function Experience({setTopic}){
     return(
         <>
           <Tabs defaultActiveKey="Job" id="justify-tab-example" className="mb-3 fugaz-one-regular" justify>
@@ -14,7 +14,7 @@ function Experience(){
               <JobExperience />
             </Tab>
             <Tab eventKey="Projects" title="Projects">
-              <Projects />
+              <Projects setTopic={setTopic}/>
             </Tab>
           </Tabs>
         </>

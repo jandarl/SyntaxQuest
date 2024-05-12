@@ -7,10 +7,24 @@ function ExpContent({title, subtitle, description, information}){
     return(
         <>
          <Stack className="ecParent" gap={3}>
-            <div id="ecTitle">{title}</div>
-            <div id="ecSubTitle">{subtitle}</div>
-            <div className="ecScrollDiv">{description}</div>
-            <div className="ecScrollDiv">{information}</div>
+            <div id="ecTitle" className="courier-prime-bold">{title}</div>
+            <div id="ecSubTitle" className="courier-prime-bold">{subtitle}</div>
+            <div className="ecScrollDiv courier-prime-regular">
+            <h5>Responsibilities and Projects:</h5>
+            <ul>
+                {description.map((item) => 
+                    <li>{item}</li>
+                )} 
+            </ul>
+            </div>
+            <div className="ecScrollDiv courier-prime-regular">
+            <h5>Skills Acquired:</h5>
+            <ul>
+                {information.map((item) => 
+                    <li>{item}</li>
+                )} 
+            </ul>
+            </div>
          </Stack>
         </>
     )

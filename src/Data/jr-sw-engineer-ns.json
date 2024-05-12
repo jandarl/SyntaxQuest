@@ -1,0 +1,15 @@
+{
+	"id": "WAI_2",
+	"Title": "Jr. Software Engineer",
+	"SubTitle": "Northstar Technologies: February 2012 - January 2016",
+	"Description": ["Built and deployed User Interfaces written in the C++ - MFC/STL to be used as an interface for the users to interact with a semiconductor equipment",
+					"Created and deployed tools written in C++ to aide the users in simplifying their work. e.g. parsers, editors, loggers etc...",
+					"Assisted Sr. Engineers in creation, implementation and deployment of libraries (DLL) written in C++ - MFC/STL",
+                    "Assisted Sr. Engineers in resolving bugs and issues of newly deployed libraries such as memory leaks, crashes or program logic problems",
+					"Built and installed Windows XP embedded together with scripts and software needed to make single board computers as embedded remote controller for legacy test equipments",
+                    "Deployed and administered a computer to act as a file server and as a local SVN server for the engineering team.",
+                    "Assisted the I.T. in setting the network for the new company building."],   
+	"Information": ["Software Development Cycle", "Advance C++/MFC/STL", "Creation and deployment of DLL", "Proper testing and resolution of issues encountered during development",
+					"Windows XP Embedded Systems and controllers", "Server Administration", "Software versioning and revision control", "Managed router and switches, VLAN, LAN cable management ( Patch Panel, Crimping ), Network racks",
+					"Visual Studio 2010", "Code Comparison and Merging"]
+}

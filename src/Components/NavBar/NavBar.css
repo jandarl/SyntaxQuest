@@ -5,16 +5,19 @@
     gap: 0;
     min-height: 400px;
     min-width: 600px;
-    background-color: rgba(1, 1, 6, 0.5);
-    backdrop-filter: blur(5px);
+   /* background-color: rgba(1, 1, 6, 0.3);
+    backdrop-filter: blur(2px);*/
+    background-color: rgba(22, 33, 49, 0.1);
+    background-image: linear-gradient(360deg,  rgba(22, 33, 49, 0.1) 0%, rgba(18,16,14,0.4) 60%);
+    backdrop-filter: blur(2px);
     border-radius: 25px;
     pointer-events: auto;
 }
 
 #navBgndOvrlay{
     grid-area: 1 / 1 / span 7 / span 3;
-    background-color: rgba(205, 205, 239, 0.1);
-    backdrop-filter: blur(5px);
+    background-color: rgba(205, 205, 239, 0.0);
+    backdrop-filter: blur(0px);
     border-radius: 25px;
     z-index: 2;
 }
@@ -75,6 +78,38 @@
     cursor: pointer;
 }
 
+
+#swpgmDiv{
+    grid-area: 2 / 2 / span 1 / span 1;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+}
+
+#swpgmImage{
+    grid-area: 1 / 2 / span 1 / span 1;
+    max-width: 5rem;
+    max-height: 5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    cursor: pointer;
+}
+
+#swpgmImage:hover{
+    box-shadow: 0 0 5px 5px rgba(155, 198, 236, 0.588);
+    border-radius: 50%;
+    opacity: 1.0;
+}
+
+#navSwpgm{
+    grid-area: 3 / 2 / span 1 / span 1;
+    z-index: 4;
+    cursor: pointer;
+}
+
 #whoamiDiv{
     grid-area: 4 / 1 / span 1 / span 1;
     z-index: 2;
@@ -105,6 +140,7 @@
     z-index: 4;
     cursor: pointer;
 }
+
 
 #navDropdownBtn{
     width: calc(100vw - 70px) !important;
