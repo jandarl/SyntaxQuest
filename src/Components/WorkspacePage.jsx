@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import SideBar from './NavBar/SideBar';
 import ContentTemp from './Body/TempTestFiles/ContentTemp';
 import WhoAmI from "./Body/WhoAmI/WhoAmI";
-import SyntaxQuest from "./Body/SoftwareDev/SyntaxQuest";
+import SyntaxQuest from "./Body/SoftwareDev/SyntaxQuest/SyntaxQuest";
 import './WorkspacePage.css';
 
 function WorkspacePage({workspaceType, isWorkspace, workspaceMode}){
@@ -31,15 +31,15 @@ function WorkspacePage({workspaceType, isWorkspace, workspaceMode}){
         switch(topic){
 
             case "who-am-i":
-                return(<WhoAmI vwSize={windowDimensions.width} setTopic={setTopic}/>);
+                return(<WhoAmI vwSize={windowDimensions.width} setTopic={setTopic} isWorkspace={isWorkspace}/>);
             break;
 
             case "syntax-quest":
-                return (<SyntaxQuest vwSize={windowDimensions.width}/>);
+                return (<SyntaxQuest vwSize={windowDimensions.width} isWorkspace={isWorkspace}/>);
             break;
 
             default:
-                return(<ContentTemp topic={topic} vwSize={windowDimensions.width}/>);
+                return(<ContentTemp topic={topic} vwSize={windowDimensions.width} isWorkspace={isWorkspace}/>);
             break;
             
         }
