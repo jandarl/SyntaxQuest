@@ -4,6 +4,8 @@ import Accordion from "react-bootstrap/Accordion";
 import CodeSection from '/src/Components/Body/SoftwareDev/Components/CodeSection';
 import WebsiteBgndJSON from '/src/Data/website-bgnd.json';
 import GradientBgndJSON from '/src/Data/gradient-bgnd.json';
+import NavBarJSX from '/src/Data/nav-bar-jsx.json';
+import NavBarCSS from '/src/Data/nav-bar-css.json';
 import '/src/Components/fonts.css';
 import './BgndMenuPage.css';
 
@@ -26,6 +28,15 @@ function BgndMenuPage(){
                         <Accordion.Body className="wellfleet-regular"> 
                             <div className="bgndMenuDiv">
                                 <CodeSection title={GradientBgndJSON.title} description={GradientBgndJSON.description} code={GradientBgndJSON.snippet}/>
+                            </div>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="2">
+                        <Accordion.Header className="fugaz-one-regular">{NavBarJSX.title}</Accordion.Header>
+                        <Accordion.Body className="wellfleet-regular"> 
+                            <div className="bgndMenuDiv">
+                                <CodeSection title={NavBarJSX.title} description={NavBarJSX.description} code={NavBarJSX.snippet}/>
+                                <CodeSection title={NavBarCSS.title} description={NavBarCSS.description} code={NavBarCSS.snippet}/>
                             </div>
                         </Accordion.Body>
                     </Accordion.Item>

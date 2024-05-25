@@ -3,6 +3,8 @@
     text-align: center;
     font-size: 30px;
     margin: 0px;
+    margin-top: 10px;
+    padding-top: 10px;
 }
 
 #codeSectionDescription{
@@ -17,6 +19,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     padding: 1rem;
+    margin-bottom: 10px;
 }
 
 .copyImg{
