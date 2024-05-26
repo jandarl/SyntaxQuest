@@ -6,6 +6,7 @@ import VidGameImg from '/videogame.png';
 import SwPgmImg from '/swpgm.png';
 import WhoAmIImg from '/whoami.png';
 import LinkedInImg from '/linkedIn.png';
+import EmailImg from '/email.png';
 import './NavBar.css';
 import '/src/Components/fonts.css';
 
@@ -21,6 +22,10 @@ function NavBar({isWorkspace, workspaceMode, vwSize}){
         switch(id){
             case "LinkedIn":
                 window.location.href='https://www.linkedin.com/in/john-andrew-hernandez-94b908102/';
+            break;
+
+            case "Email":
+                window.location.href='mailto:drew.c.hernandez@gmail.com';
             break;
 
             default:
@@ -70,6 +75,9 @@ function NavBar({isWorkspace, workspaceMode, vwSize}){
                         <img src={LinkedInImg} id="LinkedInImg" 
                         onClick={() => handleSocMedClick("LinkedIn")}/>
                         <Tooltip anchorSelect="#LinkedInImg" place="bottom">LinkedIn</Tooltip>
+                        <img src={EmailImg} id="EmailImg" 
+                        onClick={() => handleSocMedClick("Email")}/>
+                        <Tooltip anchorSelect="#EmailImg" place="bottom">drew.c.hernandez@gmail.com</Tooltip>
                     </div>
                 </div>
             )

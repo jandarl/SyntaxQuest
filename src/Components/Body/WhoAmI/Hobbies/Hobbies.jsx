@@ -5,7 +5,9 @@ import FFXIV from '/final-fantasy-xiv.jpg';
 import LongWalksAlone from '/longwalks.jpeg';
 import SciFi from '/startrek.jpg';
 import FactsMyths from '/factsmyths.jpg';
-import AnimeManga from '/anime-manga.jpg';
+import AnimeManga from '/anime-manga.png';
+import ReverseEngg from '/reverse.jpg';
+import BuildThings from '/building.png';
 import '/src/Components/fonts.css';
 import './Hobbies.css';
 
@@ -21,6 +23,30 @@ function Hobbies(){
                         <p className="crslp courier-prime-bold ">
                         I often watch Sci-Fi movies or series. I have always wondered and dreamed how life would be when humans have achieved interstellar travel or
                         when we have advance AI, medicine and life in general through science. 
+                        </p>
+                    </div>
+                </Carousel.Caption>
+            </Carousel.Item>
+             <Carousel.Item>
+                <img className="crslImg" src={ReverseEngg}></img>
+                <Carousel.Caption>
+                    <div className="crslHdr">
+                      <h3 className="crslh3 bungee-shade-regular">How stuff works</h3>
+                        <p className="crslp courier-prime-bold ">
+                        I have always been a curious person, since childhood I would often get scolded for disassembling my toys / gadgets because I wanted to understand how it worked.
+                        It has helped me in learning a lot and has been very useful a lot of times in my work and daily life. 
+                        </p>
+                    </div>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img className="crslImg" src={BuildThings}></img>
+                <Carousel.Caption>
+                    <div className="crslHdr">
+                      <h3 className="crslh3 bungee-shade-regular">Build Things</h3>
+                        <p className="crslp courier-prime-bold ">
+                        Just as I have been disassembling things to learn how they work, I like to build things based on what I have learned. I got into software development 
+                        because it allows me to disassemble and build a lot of things without a large cost.
                         </p>
                     </div>
                 </Carousel.Caption>
