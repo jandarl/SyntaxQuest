@@ -6,6 +6,8 @@ import WebsiteBgndJSON from '/src/Data/website-bgnd.json';
 import GradientBgndJSON from '/src/Data/gradient-bgnd.json';
 import NavBarJSX from '/src/Data/nav-bar-jsx.json';
 import NavBarCSS from '/src/Data/nav-bar-css.json';
+import SideBarJSX from '/src/Data/side-bar-jsx.json';
+import SideBarCSS from '/src/Data/side-bar-css.json';
 import '/src/Components/fonts.css';
 import './BgndMenuPage.css';
 
@@ -37,6 +39,15 @@ function BgndMenuPage(){
                             <div className="bgndMenuDiv">
                                 <CodeSection title={NavBarJSX.title} description={NavBarJSX.description} code={NavBarJSX.snippet}/>
                                 <CodeSection title={NavBarCSS.title} description={NavBarCSS.description} code={NavBarCSS.snippet}/>
+                            </div>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="3">
+                        <Accordion.Header className="fugaz-one-regular">{SideBarJSX.title}</Accordion.Header>
+                        <Accordion.Body className="wellfleet-regular"> 
+                            <div className="bgndMenuDiv">
+                                <CodeSection title={SideBarJSX.title} description={SideBarJSX.description} code={SideBarJSX.snippet}/>
+                                <CodeSection title={SideBarCSS.title} description={SideBarCSS.description} code={SideBarCSS.snippet}/>
                             </div>
                         </Accordion.Body>
                     </Accordion.Item>

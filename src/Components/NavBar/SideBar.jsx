@@ -60,7 +60,7 @@ function Sidebar({workspaceType, setTopic, vwSize}){
                     <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} 
                                 open={showVGames} trigger="Video Games" value="video-games">
                         <ul className="sideList" id="vgameList">
-                            <li className="listItem" onClick={handleClick} id="final-fantasy-vii-rebirth">Final Fantasy VII Rebirth</li>
+                            <li className="listItem" onClick={handleClick} id="final-fantasy-vii-rebirth">Video Games List</li>
                         </ul>
                     </Collapsible>
                     <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} 

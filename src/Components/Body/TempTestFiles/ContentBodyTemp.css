@@ -1,4 +1,8 @@
 
 #contentTempBody{
     color: aliceblue;
+    white-space: pre-wrap;
+    text-align: left;
+    padding: 10px;
+    font-size: 20px;
 }

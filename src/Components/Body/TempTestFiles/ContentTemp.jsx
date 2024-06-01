@@ -52,7 +52,7 @@ function ContentTemp({topic, vwSize, isWorkspace}){
         return (
             <Breadcrumb>
                 <Breadcrumb.Item onClick={handleBCClick} className="bcStyle vt323-regular prevent-select">Home</Breadcrumb.Item>
-                <Breadcrumb.Item active className="bcStyle vt323-regular prevent-select">FFVII Rebirth</Breadcrumb.Item>
+                <Breadcrumb.Item active className="bcStyle vt323-regular prevent-select">Video Games</Breadcrumb.Item>
             </Breadcrumb>
         );
     }

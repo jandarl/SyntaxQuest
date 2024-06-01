@@ -1,0 +1,5 @@
+{
+	"title": "Side Bar CSS",
+	"description":"For the CSS side of the side bar, it is mostly for background color, text alignment, borders, margins and padding.",
+	"snippet":".closeClass{\n    margin: 5px;\n    padding: 5px;\n    cursor: pointer;\n    z-index: 2;\n    color:aliceblue;\n}\n\n.openClass{\n    margin: 5px;\n    padding: 5px;\n    cursor: pointer;\n    z-index: 2;\n    color:aliceblue;\n}\n\nul{\n    margin: 5px;\n    color:aliceblue;\n}\n"
+}
