@@ -1,0 +1,33 @@
+{
+	"id": "WEBH",
+	"Title": "Syntax Quest History",
+	"Subtitle": "Github Updates Timeline",
+	"Dates": [  "Apr 07, 2024",
+			    "Apr 10, 2024",
+				"Apr 14, 2024",
+				"Apr 21, 2024",
+				"Apr 28, 2024",
+				"May 03, 2024",
+				"May 05, 2024",
+				"May 12, 2024",
+				"May 19, 2024",
+				"May 25, 2024",
+				"May 26, 2024",
+				"Jun 01, 2024",
+				"Jun 02, 2024"
+			],
+	"Description": ["Initial Revision: Landing Page and Workspace Page",
+					"Add Sidebar, content and content body",
+					"Reading content and display from JSON added. Fixed issues with resizing.",
+					"Added WhoAmI page and refactored existing codes, Added WhoAmI content collapsible",
+					"Added Contents for the WhoAmI and Job Exp",
+					"Added Experience Contents",
+					"Added Responsive Interface when Viewport is small",
+					"Cleaned up the temporary contents. Added Project Cards and Job Experience Information. Changed Website Face. Fixed transition of tabs",
+					"Updated Syntax Quest page with data and real information",
+					"Added LinkedIn link, Navigation Bar section in Syntax Quest page",
+					"Added email and additional hobbies",
+					"Added Side Bar section in Syntax Quest, edited Video games to have an actual content",
+					"Added Website History Section, Email at the dropdown menu of navbar"
+				   ]
+}

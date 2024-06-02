@@ -5,6 +5,7 @@ import { Tooltip } from 'react-tooltip';
 import VidGameImg from '/videogame.png';
 import SwPgmImg from '/swpgm.png';
 import WhoAmIImg from '/whoami.png';
+import WebHistImg from '/website-history.png';
 import LinkedInImg from '/linkedIn.png';
 import EmailImg from '/email.png';
 import './NavBar.css';
@@ -71,19 +72,27 @@ function NavBar({isWorkspace, workspaceMode, vwSize}){
                             onMouseEnter={() => handleHover("whoamiImage", true)}
                             onMouseLeave={() => handleHover("whoamiImage", false)}>Who Am I?</h6>
                     </div>
+                    <div className="centerImg" id="sqHistDiv">
+                        <img src={WebHistImg} className="clickImg" id="sqHistImage" 
+                        onClick={() => handleClick("website-history")}/>
+                        <h6 className="navName fugaz-one-regular" id="navSqHist"
+                            onClick={() => handleClick("website-history")}
+                            onMouseEnter={() => handleHover("sqHistImage", true)}
+                            onMouseLeave={() => handleHover("sqHistImage", false)}>Web Updates</h6>
+                    </div>
                     <div id="socMedDiv">
                         <img src={LinkedInImg} id="LinkedInImg" 
                         onClick={() => handleSocMedClick("LinkedIn")}/>
                         <Tooltip anchorSelect="#LinkedInImg" place="bottom">LinkedIn</Tooltip>
                         <img src={EmailImg} id="EmailImg" 
                         onClick={() => handleSocMedClick("Email")}/>
-                        <Tooltip anchorSelect="#EmailImg" place="bottom">drew.c.hernandez@gmail.com</Tooltip>
+                        <Tooltip anchorSelect="#EmailImg" place="bottom">mailto: drew.c.hernandez@gmail.com</Tooltip>
                     </div>
                 </div>
             )
         }else{
             return(
-                <DropdownButton id="navDropdownBtn" title="Menu" size={vwSize}>
+                <DropdownButton id="navDropdownBtn" title="Menu" size="lg">
                     <Dropdown.Item className="navDropItem fugaz-one-regular" onClick={() => handleClick("final-fantasy-vii-rebirth")}>
                         <img src={VidGameImg} className="navDropImg"/> Video Games 
                     </Dropdown.Item>
@@ -95,6 +104,9 @@ function NavBar({isWorkspace, workspaceMode, vwSize}){
                     </Dropdown.Item>
                     <Dropdown.Item className="navDropItem fugaz-one-regular" onClick={() => handleSocMedClick("LinkedIn")}>
                         <img src={LinkedInImg} className="navDropImg "/> LinkedIn Page
+                    </Dropdown.Item>
+                    <Dropdown.Item className="navDropItem fugaz-one-regular" onClick={() => handleSocMedClick("Email")}>
+                        <img src={EmailImg} className="navDropImg "/> mailto: drew.c.hernandez@gmail.com
                     </Dropdown.Item>
                 </DropdownButton>                
             )

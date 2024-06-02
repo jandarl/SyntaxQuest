@@ -139,6 +139,36 @@
     cursor: pointer;
 }
 
+#sqHistDiv{
+    grid-area: 4 / 3 / span 1 / span 1;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+}
+
+#sqHistImage{
+    grid-area: 1 / 2 / span 1 / span 1;
+    max-width: 5rem;
+    max-height: 5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    cursor: pointer;
+}
+
+#sqHistImage:hover{
+    box-shadow: 0 0 5px 5px rgba(155, 198, 236, 0.588);
+    border-radius: 50%;
+    opacity: 1.0;
+}
+
+#navSqHist{
+    grid-area: 3 / 2 / span 1 / span 1;
+    z-index: 4;
+    cursor: pointer;
+}
 
 #navDropdownBtn{
     width: calc(100vw - 70px) !important;

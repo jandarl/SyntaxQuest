@@ -40,6 +40,7 @@ function Sidebar({workspaceType, setTopic, vwSize}){
                 break;
             case "who-am-i":
             case "life-experience":
+            case "website-history":
                 setShowLife(true);
                 break;
            }
@@ -70,9 +71,10 @@ function Sidebar({workspaceType, setTopic, vwSize}){
                         </ul>
                     </Collapsible>
                     <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} 
-                                open={showLife} trigger="Life Experience" value="life-experience">
+                                open={showLife} trigger="About" value="life-experience">
                         <ul className="sideList" id="lifeexp">
                             <li className="listItem" onClick={handleClick} id="who-am-i">Who Am I?</li>
+                            <li className="listItem" onClick={handleClick} id="website-history">Website Updates</li>
                         </ul>
                     </Collapsible>
                 </div>
@@ -99,9 +101,10 @@ function Sidebar({workspaceType, setTopic, vwSize}){
                             </ul>
                         </Collapsible>
                         <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} 
-                                open={showLife} trigger="Life Experience" value="life-experience">
+                                open={showLife} trigger="About" value="life-experience">
                             <ul className="sideList" id="lifeexp">
                                 <li className="listItem" onClick={handleClick} id="who-am-i">Who Am I?</li>
+                                <li className="listItem" onClick={handleClick} id="website-history">Website Updates</li>
                             </ul>
                         </Collapsible>
                     </Offcanvas.Body>

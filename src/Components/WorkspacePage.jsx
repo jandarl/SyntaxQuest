@@ -3,6 +3,7 @@ import SideBar from './NavBar/SideBar';
 import ContentTemp from './Body/TempTestFiles/ContentTemp';
 import WhoAmI from "./Body/WhoAmI/WhoAmI";
 import SyntaxQuest from "./Body/SoftwareDev/SyntaxQuest/SyntaxQuest";
+import WebsiteHist from "./Body/WebsiteHistory";
 import './WorkspacePage.css';
 
 function WorkspacePage({workspaceType, isWorkspace, workspaceMode}){
@@ -37,6 +38,9 @@ function WorkspacePage({workspaceType, isWorkspace, workspaceMode}){
             case "syntax-quest":
                 return (<SyntaxQuest vwSize={windowDimensions.width} isWorkspace={isWorkspace}/>);
             break;
+
+            case "website-history":
+                return (<WebsiteHist vwSize={windowDimensions.width} isWorkspace={isWorkspace}/>)
 
             default:
                 return(<ContentTemp topic={topic} vwSize={windowDimensions.width} isWorkspace={isWorkspace}/>);
