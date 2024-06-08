@@ -14,7 +14,8 @@
 				"May 25, 2024",
 				"May 26, 2024",
 				"Jun 01, 2024",
-				"Jun 02, 2024"
+				"Jun 02, 2024",
+				"Jun 08, 2024"
 			],
 	"Description": ["Initial Revision: Landing Page and Workspace Page",
 					"Add Sidebar, content and content body",
@@ -28,6 +29,7 @@
 					"Added LinkedIn link, Navigation Bar section in Syntax Quest page",
 					"Added email and additional hobbies",
 					"Added Side Bar section in Syntax Quest, edited Video games to have an actual content",
-					"Added Website History Section, Email at the dropdown menu of navbar"
+					"Added Website History Section, Email at the dropdown menu of navbar",
+					"Added Small version of the Navbar and Side Bar in their respective sections in the Syntax Quest content. Added Author's notes in the Website Updates page."
 				   ]
 }

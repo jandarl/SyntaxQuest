@@ -1,0 +1,5 @@
+{
+	"title": "Side Bar CSS Small Screen",
+	"description":"For the CSS side, it is mostly for background color, text alignment, borders, margins and padding of the Button Menu and the OffCanvas menu.",
+	"snippet":"#offCanvasBtn{\n    position: absolute;\n    top: 60px;\n    left: 10px;\n    background-color: rgba(22, 33, 49, 0.0);\n    border-radius: 10px;\n    border-color: rgba(22, 33, 49, 0.0);\n    z-index: 3;\n    width: 70px;\n    height: 40px;\n}\n\n#offCanvasMenu{\n    width: 220px;\n    background-color: rgba(22, 33, 49, 0.7);\n    background-image: linear-gradient(180deg,  rgba(22, 33, 49, 0.7) 0%, rgba(18,16,14,0.9) 60%);\n    border-radius: 10px;\n    color: aliceblue;\n}"
+}

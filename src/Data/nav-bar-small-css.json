@@ -1,0 +1,5 @@
+{
+	"title": "Navigation Bar Small Screen CSS",
+	"description":"For the CSS side, it is mostly for background color, text alignment, borders, margins and padding.\n",
+	"snippet":"#navDropdownBtn{\n    width: calc(100vw - 70px) !important;\n    background-color: rgba(1, 1, 6, 0.5);\n    backdrop-filter: blur(5px);\n    border-color: rgba(205, 205, 239, 0.1);\n}\n\n.navDropItem{\n    width: calc(100vw - 70px) !important; \n    font-size: 20px;\n}\n\n.navDropItem:hover{\n    background-color: rgba(1, 1, 6, 0.5) !important;\n    color: aliceblue !important;\n}\n\n.navDropImg{\n    width: 32px;\n    height: 32px;\n}\n\n"
+}

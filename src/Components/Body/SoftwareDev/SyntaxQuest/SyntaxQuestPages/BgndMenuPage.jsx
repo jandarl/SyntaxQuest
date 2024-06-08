@@ -6,8 +6,12 @@ import WebsiteBgndJSON from '/src/Data/website-bgnd.json';
 import GradientBgndJSON from '/src/Data/gradient-bgnd.json';
 import NavBarJSX from '/src/Data/nav-bar-jsx.json';
 import NavBarCSS from '/src/Data/nav-bar-css.json';
+import NavBarJSXSm from '/src/Data/nav-bar-small-jsx.json';
+import NavBarCSSSm from '/src/Data/nav-bar-small-css.json';
 import SideBarJSX from '/src/Data/side-bar-jsx.json';
 import SideBarCSS from '/src/Data/side-bar-css.json';
+import SideBarJSXSm from '/src/Data/side-bar-small-jsx.json';
+import SideBarCSSSm from '/src/Data/side-bar-small-css.json';
 import '/src/Components/fonts.css';
 import './BgndMenuPage.css';
 
@@ -39,6 +43,8 @@ function BgndMenuPage(){
                             <div className="bgndMenuDiv">
                                 <CodeSection title={NavBarJSX.title} description={NavBarJSX.description} code={NavBarJSX.snippet}/>
                                 <CodeSection title={NavBarCSS.title} description={NavBarCSS.description} code={NavBarCSS.snippet}/>
+                                <CodeSection title={NavBarJSXSm.title} description={NavBarJSXSm.description} code={NavBarJSXSm.snippet}/>
+                                <CodeSection title={NavBarCSSSm.title} description={NavBarCSSSm.description} code={NavBarCSSSm.snippet}/>
                             </div>
                         </Accordion.Body>
                     </Accordion.Item>
@@ -48,6 +54,8 @@ function BgndMenuPage(){
                             <div className="bgndMenuDiv">
                                 <CodeSection title={SideBarJSX.title} description={SideBarJSX.description} code={SideBarJSX.snippet}/>
                                 <CodeSection title={SideBarCSS.title} description={SideBarCSS.description} code={SideBarCSS.snippet}/>
+                                <CodeSection title={SideBarJSXSm.title} description={SideBarJSXSm.description} code={SideBarJSXSm.snippet}/>
+                                <CodeSection title={SideBarCSSSm.title} description={SideBarCSSSm.description} code={SideBarCSSSm.snippet}/>
                             </div>
                         </Accordion.Body>
                     </Accordion.Item>
