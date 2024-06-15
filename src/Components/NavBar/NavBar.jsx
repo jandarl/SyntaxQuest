@@ -45,7 +45,7 @@ function NavBar({isWorkspace, workspaceMode, vwSize}){
                     {NavBarData.links.map((item) =>
                     <div key={item.id}>
                         <img src={item.imgPath} id={item.imgID} onClick={() => handleSocMedClick(item.id)}/>
-                        <Tooltip anchorSelect={"#" + item.imgID} place="bottom">{item.id}</Tooltip>
+                        <Tooltip anchorSelect={"#" + item.imgID} place="bottom">{item.text}</Tooltip>
                     </div>
                     )}
                     </div>

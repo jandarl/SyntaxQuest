@@ -78,6 +78,7 @@ function WebsiteHistory({vwSize, isWorkspace}){
                                 <li style={{padding: "5px"}} key={item}>{item}</li>
                             )} 
                         </ul>
+                        <a href={ANotesData.github} className="courier-prime-regular">Link to Github Repository</a>
                     </Collapsible>
                     <Collapsible className="hiddenHistPage fugaz-one-regular" openedClassName="openHistPage fugaz-one-regular"   
                            onOpening={toggleCollapsible} onClosing={closeCollapsible} open={showHistory}
