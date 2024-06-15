@@ -2,16 +2,16 @@ import React, {useEffect, useState} from "react";
 import Collapsible from 'react-collapsible';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import SideBarData from '/src/Data/side-bar-data.json';
 import './SideBar.css';
 import '/src/Components/fonts.css';
 
 function Sidebar({workspaceType, setTopic, vwSize}){
-
     const [showVGames, setShowVGames] = useState(false);
     const [showSoftDev, setShowSoftDev] = useState(false);
     const [showLife, setShowLife] = useState(false);
-    const [isInit, setInit] = useState(false);
 
+    const [isInit, setInit] = useState(false);
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -29,21 +29,26 @@ function Sidebar({workspaceType, setTopic, vwSize}){
         setShowSoftDev(false);
         setShowLife(false);
 
-        switch(value){
-            case "video-games":
-            case "final-fantasy-vii-rebirth":
-                setShowVGames(true);
-                break;
-            case "software-dev":
-            case "syntax-quest":
-                setShowSoftDev(true);
-                break;
-            case "who-am-i":
-            case "life-experience":
-            case "website-history":
-                setShowLife(true);
-                break;
-           }
+        var menuIndex = -1;
+
+        SideBarData.menu.map((menus, index) => {
+            if(menus.id === value){
+                menuIndex = index;
+            }
+
+            menus.items.map((item) => 
+                {if(item.id === value){
+                    menuIndex = index;
+            }})
+        })
+
+        switch(menuIndex){
+            case 0: setShowVGames(true); break;
+            case 1: setShowSoftDev(true); break;
+            case 2: setShowLife(true); break;
+            default:
+                setShowLife(true); break;
+        }
     }
 
     function handleOpening(){
@@ -54,29 +59,38 @@ function Sidebar({workspaceType, setTopic, vwSize}){
         setTopic(event.target.id);
     }
 
+    function getTrigger(id){
+        switch(id){
+            case "video-games": return showVGames; break;
+            case "software-dev": return showSoftDev; break;
+            case "life-experience": return showLife; break;
+            default:
+                return showLife; break;
+        }
+    }
+
+    function theMenu(){
+        return(
+            <>
+            {SideBarData.menu.map((menus) => 
+                <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening}  
+                             open={getTrigger(menus.id)} trigger={menus.text} value={menus.id} key={menus.id}>
+                    <ul className="sideList" id={menus.listID}>
+                        {menus.items.map((item) => 
+                            <li className="listItem" onClick={handleClick} id={item.id} key={item.id}>{item.text}</li>
+                        )}
+                    </ul>
+                </Collapsible>
+            )} 
+            </>
+        )
+    }
+
     function useSideBar(){
         if(vwSize > 650){
             return(
                 <div id="sideParent" className="prevent-select">
-                    <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} 
-                                open={showVGames} trigger="Video Games" value="video-games">
-                        <ul className="sideList" id="vgameList">
-                            <li className="listItem" onClick={handleClick} id="final-fantasy-vii-rebirth">Video Games List</li>
-                        </ul>
-                    </Collapsible>
-                    <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} 
-                                 open={showSoftDev} trigger="Software Development" value="software-dev">
-                        <ul className="sideList" id="softdev">
-                            <li className="listItem" onClick={handleClick} id="syntax-quest">Syntax Quest</li>
-                        </ul>
-                    </Collapsible>
-                    <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} 
-                                open={showLife} trigger="About" value="life-experience">
-                        <ul className="sideList" id="lifeexp">
-                            <li className="listItem" onClick={handleClick} id="who-am-i">Who Am I?</li>
-                            <li className="listItem" onClick={handleClick} id="website-history">Website Updates</li>
-                        </ul>
-                    </Collapsible>
+                    {theMenu()}    
                 </div>
             )
         }else{
@@ -88,25 +102,7 @@ function Sidebar({workspaceType, setTopic, vwSize}){
                 
                 <Offcanvas id="offCanvasMenu" show={show} onHide={handleClose}>
                     <Offcanvas.Body>
-                        <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} 
-                                     open={showVGames} trigger="Video Games" value="video-games">
-                            <ul className="sideList" id="vgameList">
-                                <li className="listItem" onClick={handleClick} id="final-fantasy-vii-rebirth">Final Fantasy VII Rebirth</li>
-                            </ul>
-                        </Collapsible>
-                        <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} 
-                                 open={showSoftDev} trigger="Software Development" value="software-dev">
-                            <ul className="sideList" id="softdev">
-                                <li className="listItem" onClick={handleClick} id="syntax-quest">Syntax Quest</li>
-                            </ul>
-                        </Collapsible>
-                        <Collapsible className="collapseParent" openedClassName="openParent" onOpening={handleOpening} 
-                                open={showLife} trigger="About" value="life-experience">
-                            <ul className="sideList" id="lifeexp">
-                                <li className="listItem" onClick={handleClick} id="who-am-i">Who Am I?</li>
-                                <li className="listItem" onClick={handleClick} id="website-history">Website Updates</li>
-                            </ul>
-                        </Collapsible>
+                        {theMenu()}
                     </Offcanvas.Body>
                 </Offcanvas>
                 </>

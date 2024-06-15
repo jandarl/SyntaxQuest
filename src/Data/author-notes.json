@@ -1,0 +1,14 @@
+{
+    "id": "AN",
+    "title": "Author's Notes",
+    "notes": "I would like to thank you for browsing this personal project website. I have decided to post all the updates I make in this page to communicate atleast a bit to the guest how the website is coming along. As you may have observed, the website updates in the past few weeks has been slow and small. I have been working on some projects that is not yet ready to be published but hopefully soon, I could start posting it here. I am also starting to work my way in learning Database (PostgreSQL) which I hopefully could also post some of my progress here when I have grasped it enough. Thank you for visiting and hopefully some of the things I have posted previously helped you in any way.",
+    "section": "Notes from current build (June 15, 2024)",
+    "github": "https://github.com/jandarl/SyntaxQuest",
+    "change": "The current build includes the following changes:",
+    "list":[
+        "Navigation Bar and Side Bar will now fetch their data from a JSON file to segregate the data from the function.",
+        "Refactored Navigation Bar and Side Bar to have a smaller and cleaner code especially the switching from big to small screen codes.",
+        "Updated the Website History page to a collapsible for less clutter and let the guest view only the information they need.",
+        "Added the Build Change section in the Website History page to allow guests to view only the latest update together with the link to the github page."
+    ]
+}

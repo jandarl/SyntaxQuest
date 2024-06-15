@@ -121,3 +121,21 @@
     color: aliceblue;
     min-width: 200px;
 }
+
+.hiddenHistPage{
+    margin: 5px;
+    padding: 5px;
+    z-index: 2;
+    color:rgb(220, 203, 160);
+    text-align: left;
+    font-size: 20px;
+}
+
+.openHistPage{
+    margin: 5px;
+    padding: 5px;
+    z-index: 2;
+    color:rgb(220, 203, 160);
+    text-align: left;
+    font-size: 20px;
+}

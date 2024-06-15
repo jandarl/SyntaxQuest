@@ -1,0 +1,58 @@
+{
+    "id": "NBD",
+    "links":
+        [
+            {
+                "id": "LinkedIn",
+                "imgID": "LinkedInImg",
+                "imgPath": "/linkedIn.png",
+                "link": "https://www.linkedin.com/in/john-andrew-hernandez-94b908102/",
+                "text": "LinkedIn Page"
+            },
+            {
+                "id": "Email",
+                "imgID": "EmailImg",
+                "imgPath": "/email.png",
+                "link": "mailto:drew.c.hernandez@gmail.com",
+                "text": "mailto: drew.c.hernandez@gmail.com"
+            }
+        ],
+    "NavBtn": [
+        {
+            "id": "NB1",
+            "divID": "vgameDiv",
+            "imgID": "vgameImage",
+            "imgPath": "/videogame.png",
+            "clickEvent": "final-fantasy-vii-rebirth",
+            "textID": "navVGames",
+            "text": "Video Games"
+        },
+        {
+            "id": "NB2",
+            "divID": "swpgmDiv",
+            "imgID": "swpgmImage",
+            "imgPath": "/swpgm.png",
+            "clickEvent": "syntax-quest",
+            "textID": "navSwpgm",
+            "text": "Software Dev."
+        },
+        {
+            "id": "NB3",
+            "divID": "whoamiDiv",
+            "imgID": "whoamiImage",
+            "imgPath": "/whoami.png",
+            "clickEvent": "who-am-i",
+            "textID": "navWhoami",
+            "text": "Who Am I?"
+        },
+        {
+            "id": "NB4",
+            "divID": "sqHistDiv",
+            "imgID": "sqHistImage",
+            "imgPath": "/website-history.png",
+            "clickEvent": "website-history",
+            "textID": "navSqHist",
+            "text": "Web Updates"
+        }
+    ]
+}

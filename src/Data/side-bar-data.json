@@ -1,0 +1,42 @@
+{
+    "id": "SBD",
+    "menu": [
+        {
+            "id": "video-games",
+            "text": "Video Games",
+            "listID": "vgameList",
+            "items": [
+                {
+                    "id": "final-fantasy-vii-rebirth",
+                    "text": "Video Games List"
+                }
+            ]
+        },
+        {
+            "id": "software-dev",
+            "text": "Software Development",
+            "listID": "softdev",
+            "items": [
+                {
+                    "id": "syntax-quest",
+                    "text": "Syntax Quest"
+                }
+            ]
+        },
+        {
+            "id": "life-experience",
+            "text": "About",
+            "listID": "lifeexp",
+            "items": [
+                {
+                    "id": "who-am-i",
+                    "text": "Who Am I?"
+                },
+                {
+                    "id": "website-history",
+                    "text": "Website Updates"
+                }
+            ]
+        }
+    ]
+}

@@ -179,7 +179,7 @@
 
 .navDropItem{
     width: calc(100vw - 70px) !important; 
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .navDropItem:hover{

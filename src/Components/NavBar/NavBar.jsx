@@ -2,12 +2,7 @@ import React from "react";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import { Tooltip } from 'react-tooltip';
-import VidGameImg from '/videogame.png';
-import SwPgmImg from '/swpgm.png';
-import WhoAmIImg from '/whoami.png';
-import WebHistImg from '/website-history.png';
-import LinkedInImg from '/linkedIn.png';
-import EmailImg from '/email.png';
+import NavBarData from '/src/Data/nav-bar-data.json';
 import './NavBar.css';
 import '/src/Components/fonts.css';
 
@@ -19,20 +14,11 @@ function NavBar({isWorkspace, workspaceMode, vwSize}){
     }
 
     const handleSocMedClick = (id) =>{
-
-        switch(id){
-            case "LinkedIn":
-                window.location.href='https://www.linkedin.com/in/john-andrew-hernandez-94b908102/';
-            break;
-
-            case "Email":
-                window.location.href='mailto:drew.c.hernandez@gmail.com';
-            break;
-
-            default:
-                window.location.href='https://www.linkedin.com/in/john-andrew-hernandez-94b908102/';
-            break;
-        }
+        NavBarData.links.map((link) =>
+            {if(link.id === id){
+                window.location.href=link.link;
+            }}
+        )
     }
 
     const handleHover = (id, hover) =>{
@@ -48,66 +34,36 @@ function NavBar({isWorkspace, workspaceMode, vwSize}){
             return(
                 <div id="navParent" className="prevent-select">
                 <div id="navBgndOvrlay"></div>
-                    <div className="centerImg" id="vgameDiv">
-                        <img src={VidGameImg}  className="clickImg" id="vgameImage" 
-                        onClick={() => handleClick("final-fantasy-vii-rebirth")}/>
-                        <h6 className="navName fugaz-one-regular" id="navVGames" 
-                            onClick={() => handleClick("final-fantasy-vii-rebirth")} 
-                            onMouseEnter={() => handleHover("vgameImage", true)}
-                            onMouseLeave={() => handleHover("vgameImage", false)}>Video Games</h6>
-                    </div>
-                    <div className="centerImg" id="swpgmDiv">
-                        <img src={SwPgmImg}  className="clickImg" id="swpgmImage" 
-                        onClick={() => handleClick("syntax-quest")}/>
-                        <h6 className="navName fugaz-one-regular" id="navSwpgm" 
-                            onClick={() => handleClick("syntax-quest")} 
-                            onMouseEnter={() => handleHover("swpgmImage", true)}
-                            onMouseLeave={() => handleHover("swpgmImage", false)}>Software Dev.</h6>
-                    </div>
-                    <div className="centerImg" id="whoamiDiv">
-                        <img src={WhoAmIImg} className="clickImg" id="whoamiImage" 
-                        onClick={() => handleClick("who-am-i")}/>
-                        <h6 className="navName fugaz-one-regular" id="navWhoami"
-                            onClick={() => handleClick("who-am-i")}
-                            onMouseEnter={() => handleHover("whoamiImage", true)}
-                            onMouseLeave={() => handleHover("whoamiImage", false)}>Who Am I?</h6>
-                    </div>
-                    <div className="centerImg" id="sqHistDiv">
-                        <img src={WebHistImg} className="clickImg" id="sqHistImage" 
-                        onClick={() => handleClick("website-history")}/>
-                        <h6 className="navName fugaz-one-regular" id="navSqHist"
-                            onClick={() => handleClick("website-history")}
-                            onMouseEnter={() => handleHover("sqHistImage", true)}
-                            onMouseLeave={() => handleHover("sqHistImage", false)}>Web Updates</h6>
-                    </div>
+                    {NavBarData.NavBtn.map((item) => 
+                        <div className="centerImg" id={item.divID} key={item.id}>
+                        <img src={item.imgPath}  className="clickImg" id={item.imgID} onClick={() => handleClick(item.clickEvent)}/>
+                        <h6 className="navName fugaz-one-regular" id={item.textID} onClick={() => handleClick(item.clickEvent)} 
+                            onMouseEnter={() => handleHover(item.imgID, true)} onMouseLeave={() => handleHover(item.imgID, false)}>{item.text}</h6>
+                        </div>
+                    )} 
                     <div id="socMedDiv">
-                        <img src={LinkedInImg} id="LinkedInImg" 
-                        onClick={() => handleSocMedClick("LinkedIn")}/>
-                        <Tooltip anchorSelect="#LinkedInImg" place="bottom">LinkedIn</Tooltip>
-                        <img src={EmailImg} id="EmailImg" 
-                        onClick={() => handleSocMedClick("Email")}/>
-                        <Tooltip anchorSelect="#EmailImg" place="bottom">mailto: drew.c.hernandez@gmail.com</Tooltip>
+                    {NavBarData.links.map((item) =>
+                    <div key={item.id}>
+                        <img src={item.imgPath} id={item.imgID} onClick={() => handleSocMedClick(item.id)}/>
+                        <Tooltip anchorSelect={"#" + item.imgID} place="bottom">{item.id}</Tooltip>
+                    </div>
+                    )}
                     </div>
                 </div>
             )
         }else{
             return(
                 <DropdownButton id="navDropdownBtn" title="Menu" size="lg">
-                    <Dropdown.Item className="navDropItem fugaz-one-regular" onClick={() => handleClick("final-fantasy-vii-rebirth")}>
-                        <img src={VidGameImg} className="navDropImg"/> Video Games 
-                    </Dropdown.Item>
-                    <Dropdown.Item className="navDropItem fugaz-one-regular" onClick={() => handleClick("syntax-quest")}>
-                        <img src={SwPgmImg} className="navDropImg"/> Sofwtare Development
-                    </Dropdown.Item>
-                    <Dropdown.Item className="navDropItem fugaz-one-regular" onClick={() => handleClick("who-am-i")}>
-                        <img src={WhoAmIImg} className="navDropImg "/> Who Am I?
-                    </Dropdown.Item>
-                    <Dropdown.Item className="navDropItem fugaz-one-regular" onClick={() => handleSocMedClick("LinkedIn")}>
-                        <img src={LinkedInImg} className="navDropImg "/> LinkedIn Page
-                    </Dropdown.Item>
-                    <Dropdown.Item className="navDropItem fugaz-one-regular" onClick={() => handleSocMedClick("Email")}>
-                        <img src={EmailImg} className="navDropImg "/> mailto: drew.c.hernandez@gmail.com
-                    </Dropdown.Item>
+                    {NavBarData.NavBtn.map((item) => 
+                        <Dropdown.Item className="navDropItem courier-prime-regular" onClick={() => handleClick(item.clickEvent)} key={item.id}>
+                        <img src={item.imgPath} className="navDropImg"/> {item.text} 
+                        </Dropdown.Item>
+                    )}
+                    {NavBarData.links.map((item) => 
+                        <Dropdown.Item className="navDropItem courier-prime-regular" onClick={() => handleSocMedClick(item.id)} key={item.id}>
+                        <img src={item.imgPath} className="navDropImg"/> {item.text} 
+                        </Dropdown.Item>
+                    )}
                 </DropdownButton>                
             )
         }
